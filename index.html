@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Monitoring Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>🚦 Traffic Monitoring Dashboard</h1>
+    <p>Frontend-Based Smart Transportation System</p>
+</header>
+
+<section class="controls">
+    <label>Select Area:</label>
+    <select id="areaSelect" onchange="updateTraffic()">
+        <option value="area1">City Center</option>
+        <option value="area2">Highway</option>
+        <option value="area3">Residential Area</option>
+        <option value="area4">Market Area</option>
+    </select>
+</section>
+
+<section class="cards">
+    <div class="card low" id="statusCard">
+        <h3>Traffic Status</h3>
+        <p id="trafficStatus">Low</p>
+    </div>
+    <div class="card">
+        <h3>Vehicle Count</h3>
+        <p id="vehicles">120</p>
+    </div>
+    <div class="card">
+        <h3>Average Speed</h3>
+        <p id="speed">45 km/h</p>
+    </div>
+    <div class="card">
+        <h3>Peak Hour</h3>
+        <p id="peak">8 AM – 10 AM</p>
+    </div>
+</section>
+
+<section class="chart-section">
+    <canvas id="trafficChart"></canvas>
+</section>
+
+<footer>
+    <p>© 2026 Traffic Monitoring Dashboard | College Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
